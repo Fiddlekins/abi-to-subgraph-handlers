@@ -1,0 +1,15 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 0;
+    padding: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.textarea {
+flex-grow: 1;
+}
