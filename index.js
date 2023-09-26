@@ -27,12 +27,11 @@ ${events.map(({name}) => {
 } from '../../generated/<TODO>'`
   const handlers = events.map(({name, inputs}) => {
     return `export function handle${name}(event: ${name}): void {
-const {${inputs.map(({name}) => name).join(',')}} = event.params;
+${inputs.map(({name}) => `const ${name} = event.params.${name};`).join('\n')}
 }`
   })
   const lines = [
     importLine,
-    '\n',
     ...handlers,
   ];
   return lines.join('\n')
