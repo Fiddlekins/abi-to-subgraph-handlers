@@ -11,5 +11,11 @@
 }
 
 .textarea {
-flex-grow: 1;
+    flex-grow: 1;
+}
+
+.output {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
 }
